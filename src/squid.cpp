@@ -148,6 +148,8 @@ int main()
     CONSOLE_SCREEN_BUFFER_INFO info;
     GetConsoleScreenBufferInfo(chandle, &info);
 
+    SetConsoleMode(chandle, ENABLE_VIRTUAL_TERMINAL_PROCESSING);
+
     x = (info.dwSize.X / 2) - (squid[0].length() / 2);
     y = 7;
 
